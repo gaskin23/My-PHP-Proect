@@ -1,0 +1,13 @@
+#!/bin/bash
+yum update -y
+yum install git -y
+yum install httpd -y
+yum install mysql -y
+amazon-linux-extras install php7.2 -y
+systemctl start httpd
+systemctl enable httpd
+cd /var/www/html
+git clone https://github.com/gaskin23/My-PHP-Proect.git
+cd /var/www/html
+mv My-PHP-Proect/* .
+systemctl restart httpd
