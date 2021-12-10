@@ -1,2 +1,2 @@
 #!/bin/bash
-aws s3 sync /var/www/html/images s3://My-PHP-Project/images
+aws s3 sync /var/www/html/images s3://gaskinphpproject/images

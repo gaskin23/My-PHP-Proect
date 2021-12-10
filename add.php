@@ -6,10 +6,10 @@ $email=$_POST['email'];
 $phone=$_POST['phone']; 
 $pic=($_FILES['photo']['name']);
 
-$servername = "projedbinstance.cxzky9x7h5eg.us-east-1.rds.amazonaws.com";
-$username = "projemaster";
+$servername = "phpdb.cxzky9x7h5eg.us-east-1.rds.amazonaws.com";
+$username = "admin";
 $password = "master1234";
-$dbname = "proje";
+$dbname = "gaskinphpproje";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
