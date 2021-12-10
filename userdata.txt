@@ -8,9 +8,9 @@ amazon-linux-extras install php7.2 -y
 systemctl start httpd
 systemctl enable httpd
 cd /var/www/html
-git clone https://github.com/gaskin23/gaskinphpproject.git
+git clone https://github.com/gaskin23/PHP-Project.git
 cd /var/www/html
-mv gaskinphpproject/* .
+mv PHP-Project/* .
 cd /var/www/html
 chmod 777 images
 cd /var/www/html
@@ -19,7 +19,4 @@ cd /var/www
 mount -t efs fs-08b0e32b3cdb80f22:/ html
 cd /etc
 echo "fs-08b0e32b3cdb80f22:/ /var/www/html efs defaults,_netdev 0 0" >> fstab 
-mysql -h projedbinstance.cxzky9x7h5eg.us-east-1.rds.amazonaws.com -P 3306 -u admin -p
-master1234
-USE gaskinphpproject;
-CREATE TABLE visitors (name VARCHAR(30), email VARCHAR(30), phone VARCHAR(30), photo VARCHAR(30));
+#mysql -h projedbinstance.cxzky9x7h5eg.us-east-1.rds.amazonaws.com -P 3306 -u admin -p
