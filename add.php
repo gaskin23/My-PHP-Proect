@@ -9,7 +9,7 @@ $pic=($_FILES['photo']['name']);
 $servername = "projedbinstance.cxzky9x7h5eg.us-east-1.rds.amazonaws.com";
 $username = "admin";
 $password = "master1234";
-$dbname = "gaskinphpproject";
+$dbname = "proje";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -17,8 +17,24 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-$sql = "INSERT INTO visitors (name , email, phone, photo)
+// sql to create table
+$sql = "CREATE TABLE visitors (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL,
+email VARCHAR(30) NOT NULL,
+phone VARCHAR(30),
+photo VARCHAR(30),
+reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)";
+    
+if ($conn->query($sql) === TRUE) {
+    echo "Table visitors created successfully";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
+    
+$conn->close();
+$sql = "INSERT INTO visitors (name, email, phone, photo)
 VALUES ('$name', '$email', '$phone', '$pic')";
 
 if ($conn->query($sql) === TRUE) {
