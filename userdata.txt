@@ -8,9 +8,9 @@ amazon-linux-extras install php7.2 -y
 systemctl start httpd
 systemctl enable httpd
 cd /var/www/html
-git clone https://github.com/gaskin23/My-PHP-Proect.git
+git clone https://github.com/gaskin23/gaskinphpproject.git
 cd /var/www/html
-mv My-PHP-Proect/* .
+mv gaskinphpproject/* .
 cd /var/www/html
 chmod 777 images
 cd /var/www/html
