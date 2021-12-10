@@ -1,5 +1,5 @@
 <?php 
-$servername = "phpdb.cxzky9x7h5eg.us-east-1.rds.amazonaws.com";
+$servername = "gaskinphp.cxzky9x7h5eg.us-east-1.rds.amazonaws.com";
 $username = "admin";
 $password = "master1234";
 $dbname = "gaskinphpproje";
