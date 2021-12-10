@@ -1,8 +1,8 @@
 <?php 
-$servername = "gaskinphp.cxzky9x7h5eg.us-east-1.rds.amazonaws.com";
+$servername = "projedbinstance.cxzky9x7h5eg.us-east-1.rds.amazonaws.com";
 $username = "admin";
 $password = "master1234";
-$dbname = "gaskinphpproje";
+$dbname = "gaskinphpproject";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
